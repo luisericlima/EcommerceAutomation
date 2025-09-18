@@ -13,7 +13,6 @@ namespace AutomationEcommerce.Pages
         public PaymentPage(IWebDriver driver)
         {
             _driver = driver;
-            // Tempo de espera padrão 10s
             _wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(10));
         }
 
@@ -26,7 +25,6 @@ namespace AutomationEcommerce.Pages
 
         private By OrderPlacedText => By.XPath("//b[text()='Order Placed!']");
 
-        // Preenche os dados do cartão
         public void EnterCardDetails(string name, string number, string cvc, string month, string year)
         {
             _wait.Until(ExpectedConditions.ElementIsVisible(NameOnCardField)).SendKeys(name);
@@ -36,7 +34,6 @@ namespace AutomationEcommerce.Pages
             _driver.FindElement(ExpiryYearField).SendKeys(year);
         }
 
-        // Clica no botão Pay and Confirm Order
         public void ClickPayButton()
         {
             var payButton = _wait.Until(ExpectedConditions.ElementToBeClickable(PayButton));
@@ -45,12 +42,10 @@ namespace AutomationEcommerce.Pages
         }
 
 
-        // Valida se o pedido foi realizado com sucesso
         public bool IsOrderSuccessful()
         {
             try
             {
-                // Espera 10 segundos antes de verificar o elemento
                 var shortWait = new WebDriverWait(_driver, TimeSpan.FromSeconds(10));
                 shortWait.Until(ExpectedConditions.ElementIsVisible(OrderPlacedText));
                 return true;

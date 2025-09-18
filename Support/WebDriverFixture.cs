@@ -12,13 +12,13 @@ namespace AutomationEcommerce.Support
 
         public WebDriverFixture()
         {
-            Driver = WebDriverHelper.InitializeDriver(); // Initialize WebDriver
+            Driver = WebDriverHelper.InitializeDriver(); 
         }
 
         [AfterScenario]
         public void Dispose()
         {
-            Driver.Quit(); // Close the browser after each scenario
+            Driver.Quit(); 
         }
     }
 }

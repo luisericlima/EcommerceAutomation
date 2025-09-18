@@ -12,7 +12,7 @@ namespace AutomationEcommerce.Tests
         private readonly IWebDriver _driver;
         private readonly SignupPage _signupPage;
 
-        // Constructor to inject the WebDriver from WebDriverFixture
+        
         public SignupSteps(WebDriverFixture fixture)
         {
             _driver = fixture.Driver;
@@ -28,16 +28,13 @@ namespace AutomationEcommerce.Tests
         [When(@"the user fills in the valid details")]
         public void WhenTheUserFillsInTheValidDetails()
         {
-            // Gerar e-mail único para o teste
             var uniqueEmail = $"user_{DateTime.Now:yyyyMMddHHmmssfff}@test.com";
             _signupPage.FillInitialSignup("Test User", uniqueEmail);
 
-            // Recuperando a senha do GitHub Secret (variável de ambiente)
 
 
-            // Preenche o formulário com as credenciais
             _signupPage.FillCompleteForm(
-                "Password123!",  // Usando a senha do segredo
+                "Password123!",  
                 "Test",
                 "User",
                 "Main Street",

@@ -16,12 +16,10 @@ namespace AutomationEcommerce.Pages
             _wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
         }
 
-        // Botões
         private By ContinueShoppingButton => By.XPath("//button[contains(@class,'close-modal') and contains(., 'Continue Shopping')]");
         private By CartMenu => By.XPath("//li/a[@href='/view_cart' and contains(., 'Cart')]");
         private By ProceedToCheckoutButton => By.XPath("//a[contains(@class,'check_out') and contains(., 'Proceed To Checkout')]");
 
-        // Clica no botão Continue Shopping do modal
         public void ClickContinueShopping()
         {
             var continueButton = _wait.Until(ExpectedConditions.ElementToBeClickable(ContinueShoppingButton));
@@ -29,7 +27,6 @@ namespace AutomationEcommerce.Pages
             ((IJavaScriptExecutor)_driver).ExecuteScript("arguments[0].click();", continueButton);
         }
 
-        // Clica no menu Cart
         public void GoToCart()
         {
             var cartElement = _wait.Until(ExpectedConditions.ElementToBeClickable(CartMenu));
@@ -37,7 +34,6 @@ namespace AutomationEcommerce.Pages
             ((IJavaScriptExecutor)_driver).ExecuteScript("arguments[0].click();", cartElement);
         }
 
-        // Clica no botão Proceed To Checkout
         public void ProceedToCheckout()
         {
             var checkoutButton = _wait.Until(ExpectedConditions.ElementToBeClickable(ProceedToCheckoutButton));

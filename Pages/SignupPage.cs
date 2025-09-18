@@ -16,17 +16,14 @@ namespace AutomationEcommerce.Pages
             _wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
         }
 
-        // Campos iniciais de cadastro
         private IWebElement NameField => _driver.FindElement(By.XPath("//input[@data-qa='signup-name']"));
         private IWebElement EmailField => _driver.FindElement(By.XPath("//input[@data-qa='signup-email']"));
         private IWebElement SignupButton => _driver.FindElement(By.XPath("//button[@data-qa='signup-button']"));
 
-        // Botão de criação de conta
         private IWebElement CreateAccountButton => _wait.Until(
             ExpectedConditions.ElementToBeClickable(By.XPath("//button[@data-qa='create-account']"))
         );
 
-        // Campos do formulário adicional
         private IWebElement TitleMr => _driver.FindElement(By.XPath("//input[@id='id_gender1']"));
         private IWebElement PasswordField => _driver.FindElement(By.XPath("//input[@data-qa='password']"));
         private IWebElement DaySelect => _driver.FindElement(By.XPath("//select[@data-qa='days']"));
@@ -58,7 +55,6 @@ namespace AutomationEcommerce.Pages
                                      string address, string address2, string company, string state,
                                      string city, string zipcode, string mobile)
         {
-            // Espera até que o campo "Mr." esteja visível
             _wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//input[@id='id_gender1']")));
 
             TitleMr.Click();

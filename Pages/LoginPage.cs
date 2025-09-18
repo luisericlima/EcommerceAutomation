@@ -10,7 +10,6 @@ namespace AutomationEcommerce.Pages
         private readonly IWebDriver _driver;
         private readonly WebDriverWait _wait;
 
-        // Localizadores dos elementos (usando XPath)
         private readonly By _usernameField = By.XPath("//input[@data-qa='login-email']");
         private readonly By _passwordField = By.XPath("//input[@data-qa='login-password']");
         private readonly By _loginButton = By.XPath("//button[@data-qa='login-button']");
@@ -22,13 +21,11 @@ namespace AutomationEcommerce.Pages
             _wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(10));
         }
 
-        // Navega até a página de login
         public void GoTo()
         {
             _driver.Navigate().GoToUrl("https://automationexercise.com/login");
         }
 
-        // Realiza login (completo)
         public void Login(string username, string password)
         {
             EnterUsername(username);

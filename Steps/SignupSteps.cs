@@ -33,16 +33,11 @@ namespace AutomationEcommerce.Tests
             _signupPage.FillInitialSignup("Test User", uniqueEmail);
 
             // Recuperando a senha do GitHub Secret (variável de ambiente)
-            var password = Environment.GetEnvironmentVariable("TEST_PASSWORD");
 
-            if (string.IsNullOrEmpty(password))
-            {
-                throw new Exception("A senha não foi configurada corretamente nos Secrets.");
-            }
 
             // Preenche o formulário com as credenciais
             _signupPage.FillCompleteForm(
-                password,  // Usando a senha do segredo
+                "Password123!",  // Usando a senha do segredo
                 "Test",
                 "User",
                 "Main Street",
@@ -67,15 +62,7 @@ namespace AutomationEcommerce.Tests
         [When(@"the user tries to register with an existing email")]
         public void WhenTheUserTriesToRegisterWithAnExistingEmail()
         {
-            // Pegando o e-mail do segredo
-            var existingEmail = Environment.GetEnvironmentVariable("TEST_EMAIL");
-
-            if (string.IsNullOrEmpty(existingEmail))
-            {
-                throw new Exception("O e-mail de teste não foi configurado corretamente nos Secrets.");
-            }
-
-            _signupPage.FillInitialSignup("Test User", existingEmail);
+            _signupPage.FillInitialSignup("Test User", "tester@gmail.com");
             _signupPage.ClickSignupButton();
         }
 

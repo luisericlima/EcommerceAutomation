@@ -11,6 +11,6 @@ obj/
 
 
 TestResults/
-*.trx
-*.html
+LivingDoc.html
+
 

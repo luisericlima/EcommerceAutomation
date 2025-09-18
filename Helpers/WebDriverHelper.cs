@@ -1,15 +1,20 @@
-﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
+﻿using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium;
+using System;
+using System.IO;
 
-namespace AutomationEcommerce.Helpers
+public class WebDriverHelper
 {
-    public class WebDriverHelper
+    public static IWebDriver InitializeDriver()
     {
-        public static IWebDriver InitializeDriver()
-        {
-            ChromeOptions options = new ChromeOptions();
-            options.AddArguments("start-maximized"); // Maximizes the window
-            return new ChromeDriver(options);
-        }
+        string userDataDir = Path.Combine(Path.GetTempPath(), "chrome_data", Guid.NewGuid().ToString());
+
+        ChromeOptions options = new ChromeOptions();
+        options.AddArgument($"--user-data-dir={userDataDir}");  // Diretório único para cada execução
+        options.AddArgument("--headless"); // Execute o navegador sem a interface gráfica (opcional)
+
+        // Inicia o WebDriver com as opções configuradas
+        IWebDriver driver = new ChromeDriver(options);
+        return driver;
     }
 }

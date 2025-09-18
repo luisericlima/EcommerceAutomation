@@ -24,6 +24,25 @@ AutomationEcommerce é uma aplicação de automação de testes para um sistema 
 
 - LivingDoc CLI: Ferramenta para gerar relatórios interativos a partir dos resultados dos testes executados com o SpecFlow.
 
+
+🔹**Variáveis de Ambiente Necessárias**
+
+Antes de rodar os testes, é obrigatório definir as variáveis de ambiente usadas no projeto.
+Exemplo no PowerShell:
+```
+$env:BASE_URL="https://automationexercise.com"; `
+$env:LOGIN_EMAIL="teste@test.com"; `
+$env:VALID_EMAIL="migixe6555@bitfami.com"; `
+$env:VALID_PASSWORD="123456789"; `
+$env:CARD_NAME="Teste Usuario"; `
+$env:CARD_NUMBER="5552324588490628"; `
+$env:CARD_CVC="630"; `
+$env:CARD_MONTH="11"; `
+$env:CARD_YEAR="2026"; `
+dotnet test
+```
+
+
 ⚡ **Como Rodar a Aplicação**
 
 Clonar o Repositório:

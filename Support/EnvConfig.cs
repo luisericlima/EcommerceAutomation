@@ -8,7 +8,6 @@ namespace AutomationEcommerce.Support
         public static string LoginEmail =>
             Environment.GetEnvironmentVariable("LOGIN_EMAIL") ?? "default@test.com";
 
-        // Nova variável para o e-mail válido
         public static string ValidEmail =>
             Environment.GetEnvironmentVariable("VALID_EMAIL")
             ?? "migixe6555@bitfami.com";
@@ -17,7 +16,6 @@ namespace AutomationEcommerce.Support
             Environment.GetEnvironmentVariable("VALID_PASSWORD")
             ?? "123456789";
             
-                // Cartão de crédito
         public static string CardName =>
             Environment.GetEnvironmentVariable("CARD_NAME") 
             ?? "Teste Usuario";

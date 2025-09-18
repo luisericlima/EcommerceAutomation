@@ -1,13 +1,14 @@
-# Build e binários
 bin/
 obj/
 
-# Visual Studio
 .vs/
 *.user
 *.suo
 *.sln.docstates
 
-# Logs e arquivos temporários
 *.log
 *.db
+
+LivingDoc.html
+TestResults.trx
+

@@ -12,7 +12,6 @@ namespace AutomationEcommerce.Tests
         private readonly IWebDriver _driver;
         private readonly SignupPage _signupPage;
 
-        
         public SignupSteps(WebDriverFixture fixture)
         {
             _driver = fixture.Driver;
@@ -22,7 +21,7 @@ namespace AutomationEcommerce.Tests
         [Given(@"the user is on the signup page")]
         public void GivenTheUserIsOnTheSignupPage()
         {
-            _driver.Navigate().GoToUrl("https://automationexercise.com/signup");
+            _driver.Navigate().GoToUrl($"{EnvConfig.BaseUrl}/signup");
         }
 
         [When(@"the user fills in the valid details")]
@@ -30,8 +29,6 @@ namespace AutomationEcommerce.Tests
         {
             var uniqueEmail = $"user_{DateTime.Now:yyyyMMddHHmmssfff}@test.com";
             _signupPage.FillInitialSignup("Test User", uniqueEmail);
-
-
 
             _signupPage.FillCompleteForm(
                 "Password123!",  
@@ -59,7 +56,9 @@ namespace AutomationEcommerce.Tests
         [When(@"the user tries to register with an existing email")]
         public void WhenTheUserTriesToRegisterWithAnExistingEmail()
         {
-            _signupPage.FillInitialSignup("Test User", "tester@gmail.com");
+            var existingEmail = EnvConfig.LoginEmail;
+
+            _signupPage.FillInitialSignup("Test User", existingEmail);
             _signupPage.ClickSignupButton();
         }
 

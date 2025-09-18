@@ -30,7 +30,7 @@ namespace AutomationEcommerce.Tests
         public void GivenIAmLoggedInToTheSiteForContinuePurchase()
         {
             _loginPage.GoTo();
-            _loginPage.Login("lihag23567@ishense.com", "123456789");
+            _loginPage.Login("migixe6555@bitfami.com", "123456789");
         }
 
         [When(@"I add a product to the cart")]
@@ -75,14 +75,13 @@ namespace AutomationEcommerce.Tests
         public void WhenIFillInThePaymentDetails()
         {
             _paymentPage.EnterCardDetails(
-                "Invente qualquer",
-                "5552324588490628",
-                "630",
-                "11",
-                "2026"
+                EnvConfig.CardName,
+                EnvConfig.CardNumber,
+                EnvConfig.CardCVC,
+                EnvConfig.CardMonth,
+                EnvConfig.CardYear
             );
             _paymentPage.ClickPayButton();
-
         }
 
         [Then(@"I should successfully place the order")]

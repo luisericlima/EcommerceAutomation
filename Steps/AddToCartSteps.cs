@@ -24,7 +24,7 @@ namespace AutomationEcommerce.Tests.CartTests
         public void GivenIAmLoggedInToTheSiteForAddToCart()
         {
             _loginPage.GoTo();
-            _loginPage.Login("lihag23567@ishense.com", "123456789");
+            _loginPage.Login(EnvConfig.ValidEmail, EnvConfig.ValidPassword);
         }
 
 

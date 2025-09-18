@@ -40,7 +40,7 @@ namespace AutomationEcommerce.Tests
         [When(@"I enter valid credentials")]
         public void WhenIEnterValidCredentials()
         {
-            _loginPage.Login("lihag23567@ishense.com", "123456789");
+            _loginPage.Login(EnvConfig.ValidEmail, EnvConfig.ValidPassword);
         }
 
         [Then(@"I should be redirected to the homepage")]

@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="738fdfa0-51f4-4186-8836-b77fc4005cae" name="luise@PC-ERIC 2025-09-17 22:16:33" runUser="PC-ERIC\luise" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2025-09-17T22:16:33.5715616-03:00" queuing="2025-09-17T22:16:33.5715620-03:00" start="2025-09-17T22:16:22.5350338-03:00" finish="2025-09-17T22:16:47.0853096-03:00" />
+  <TestSettings name="default" id="fbf4f3a3-46b8-4088-8152-c91a5c2acae5">
+    <Deployment runDeploymentRoot="luise_PC-ERIC_2025-09-17_22_16_33" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="afa7e2b9-cf8d-4245-8f64-daa1b5b17b67" testId="0eef3a3d-4ece-41b0-2cea-a8641df0a46c" testName="Add a product to the cart successfully" computerName="PC-ERIC" duration="00:00:14.6111215" startTime="2025-09-17T22:16:23.3013972-03:00" endTime="2025-09-17T22:16:37.9154416-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="afa7e2b9-cf8d-4245-8f64-daa1b5b17b67">
+      <Output>
+        <StdOut>Given I am logged in to the site for Add to Cart&#xD;
+-&gt; done: AddToCartSteps.GivenIAmLoggedInToTheSiteForAddToCart() (10,4s)&#xD;
+When I go to the products page&#xD;
+-&gt; done: AddToCartSteps.WhenIGoToTheProductsPage() (2,0s)&#xD;
+And I click on "View Product" of a specific product&#xD;
+-&gt; done: AddToCartSteps.WhenIClickOnViewProductOfASpecificProduct("View Product") (1,1s)&#xD;
+And I click on "Add to cart"&#xD;
+-&gt; done: AddToCartSteps.WhenIClickOnAddToCart("Add to cart") (0,1s)&#xD;
+Then I should see the "Added!" modal&#xD;
+-&gt; done: AddToCartSteps.ThenIShouldSeeTheAddedModal("Added!") (0,5s)&#xD;
+And I close the modal&#xD;
+-&gt; done: AddToCartSteps.ThenICloseTheModal() (0,1s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="a7aa2b11-ca73-4e90-9fa8-ce385aa46964" testId="4965ee36-297b-08e8-cebe-50ea39da6f3b" testName="Login with valid credentials" computerName="PC-ERIC" duration="00:00:10.2327008" startTime="2025-09-17T22:16:23.3003928-03:00" endTime="2025-09-17T22:16:33.5390217-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a7aa2b11-ca73-4e90-9fa8-ce385aa46964">
+      <Output>
+        <StdOut>Given I am on the login page&#xD;
+-&gt; done: LoginSteps.GivenIAmOnTheLoginPage() (7,0s)&#xD;
+When I enter valid credentials&#xD;
+-&gt; done: LoginSteps.WhenIEnterValidCredentials() (2,9s)&#xD;
+Then I should be redirected to the homepage&#xD;
+-&gt; done: LoginSteps.ThenIShouldBeRedirectedToTheHomepage() (0,0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="7813cba4-38ef-4716-a49e-166203401c04" testId="951c90fe-722e-78cd-5500-b16f9e9986cc" testName="Invalid login attempt" computerName="PC-ERIC" duration="00:00:06.9823434" startTime="2025-09-17T22:16:33.5564097-03:00" endTime="2025-09-17T22:16:40.5218678-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7813cba4-38ef-4716-a49e-166203401c04">
+      <Output>
+        <StdOut>Given I am on the login page&#xD;
+-&gt; done: LoginSteps.GivenIAmOnTheLoginPage() (1,8s)&#xD;
+When I enter invalid credentials&#xD;
+-&gt; done: LoginSteps.WhenIEnterInvalidCredentials() (4,9s)&#xD;
+Then I should see an error message&#xD;
+-&gt; done: LoginSteps.ThenIShouldSeeAnErrorMessage() (0,0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="496d153a-d099-4884-91ef-b7e179ef97c0" testId="24a4d782-59c0-ea76-7875-2a4a8caf2d5c" testName="Complete purchase flow with valid data" computerName="PC-ERIC" duration="00:00:21.3662556" startTime="2025-09-17T22:16:23.3013756-03:00" endTime="2025-09-17T22:16:44.6703776-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="496d153a-d099-4884-91ef-b7e179ef97c0">
+      <Output>
+        <StdOut>Given I am logged in to the site for Continue Purchase&#xD;
+-&gt; done: ContinuePurchaseSteps.GivenIAmLoggedInToTheSiteForContinuePurchase() (9,9s)&#xD;
+When I add a product to the cart&#xD;
+-&gt; done: ContinuePurchaseSteps.WhenIAddAProductToTheCart() (3,2s)&#xD;
+And I close the modal with "Continue Shopping"&#xD;
+-&gt; done: ContinuePurchaseSteps.WhenICloseTheModalWithContinueShopping("Continue Shopping") (0,6s)&#xD;
+And I go to the cart&#xD;
+-&gt; done: ContinuePurchaseSteps.WhenIGoToTheCart() (0,8s)&#xD;
+And I proceed to checkout&#xD;
+-&gt; done: ContinuePurchaseSteps.WhenIProceedToCheckout() (1,7s)&#xD;
+And I enter a message in the checkout&#xD;
+-&gt; done: ContinuePurchaseSteps.WhenIEnterAMessageInTheCheckout() (0,1s)&#xD;
+And I place the order&#xD;
+-&gt; done: ContinuePurchaseSteps.WhenIPlaceTheOrder() (0,9s)&#xD;
+And I fill in the payment details&#xD;
+-&gt; done: ContinuePurchaseSteps.WhenIFillInThePaymentDetails() (3,6s)&#xD;
+Then I should successfully place the order&#xD;
+-&gt; done: ContinuePurchaseSteps.ThenIShouldSuccessfullyPlaceTheOrder() (0,0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="310a7df5-84de-464f-aed2-91cbe8dcc7ea" testId="37c25d94-8dbb-0bb2-54f7-a12e2551d7c8" testName="Registering with an existing email" computerName="PC-ERIC" duration="00:00:12.2400613" startTime="2025-09-17T22:16:23.3013384-03:00" endTime="2025-09-17T22:16:35.5445466-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="310a7df5-84de-464f-aed2-91cbe8dcc7ea">
+      <Output>
+        <StdOut>Given the user is on the signup page&#xD;
+-&gt; done: SignupSteps.GivenTheUserIsOnTheSignupPage() (7,1s)&#xD;
+When the user tries to register with an existing email&#xD;
+-&gt; done: SignupSteps.WhenTheUserTriesToRegisterWithAnExistingEmail() (4,2s)&#xD;
+Then the system should display the message "Email Address already exist!"&#xD;
+-&gt; done: SignupSteps.ThenTheSystemShouldDisplayTheMessage("Email Address alr...") (0,2s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="e7116709-b3ca-45fd-8fb2-2abcd1cfc47e" testId="27541a9e-3061-c5f8-ec55-c2340f3f8186" testName="Successful user registration" computerName="PC-ERIC" duration="00:00:11.3197110" startTime="2025-09-17T22:16:35.5464476-03:00" endTime="2025-09-17T22:16:46.8642962-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e7116709-b3ca-45fd-8fb2-2abcd1cfc47e">
+      <Output>
+        <StdOut>Given the user is on the signup page&#xD;
+-&gt; done: SignupSteps.GivenTheUserIsOnTheSignupPage() (5,3s)&#xD;
+When the user fills in the valid details&#xD;
+-&gt; done: SignupSteps.WhenTheUserFillsInTheValidDetails() (5,7s)&#xD;
+Then the system should display a success message&#xD;
+-&gt; done: SignupSteps.ThenTheSystemShouldDisplayASuccessMessage() (0,0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="Login with valid credentials" storage="c:\users\luise\downloads\project\bin\debug\net8.0\automationecommerce.dll" id="4965ee36-297b-08e8-cebe-50ea39da6f3b">
+      <Execution id="a7aa2b11-ca73-4e90-9fa8-ce385aa46964" />
+      <TestMethod codeBase="C:\Users\luise\Downloads\project\bin\Debug\net8.0\AutomationEcommerce.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="AutomationEcommerce.Features.UserLoginFeature" name="LoginWithValidCredentials" />
+    </UnitTest>
+    <UnitTest name="Complete purchase flow with valid data" storage="c:\users\luise\downloads\project\bin\debug\net8.0\automationecommerce.dll" id="24a4d782-59c0-ea76-7875-2a4a8caf2d5c">
+      <Execution id="496d153a-d099-4884-91ef-b7e179ef97c0" />
+      <TestMethod codeBase="C:\Users\luise\Downloads\project\bin\Debug\net8.0\AutomationEcommerce.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="AutomationEcommerce.Features.CompletePurchaseFlowFeature" name="CompletePurchaseFlowWithValidData" />
+    </UnitTest>
+    <UnitTest name="Successful user registration" storage="c:\users\luise\downloads\project\bin\debug\net8.0\automationecommerce.dll" id="27541a9e-3061-c5f8-ec55-c2340f3f8186">
+      <Execution id="e7116709-b3ca-45fd-8fb2-2abcd1cfc47e" />
+      <TestMethod codeBase="C:\Users\luise\Downloads\project\bin\Debug\net8.0\AutomationEcommerce.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="AutomationEcommerce.Features.UserRegistrationFeature" name="SuccessfulUserRegistration" />
+    </UnitTest>
+    <UnitTest name="Registering with an existing email" storage="c:\users\luise\downloads\project\bin\debug\net8.0\automationecommerce.dll" id="37c25d94-8dbb-0bb2-54f7-a12e2551d7c8">
+      <Execution id="310a7df5-84de-464f-aed2-91cbe8dcc7ea" />
+      <TestMethod codeBase="C:\Users\luise\Downloads\project\bin\Debug\net8.0\AutomationEcommerce.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="AutomationEcommerce.Features.UserRegistrationFeature" name="RegisteringWithAnExistingEmail" />
+    </UnitTest>
+    <UnitTest name="Add a product to the cart successfully" storage="c:\users\luise\downloads\project\bin\debug\net8.0\automationecommerce.dll" id="0eef3a3d-4ece-41b0-2cea-a8641df0a46c">
+      <Execution id="afa7e2b9-cf8d-4245-8f64-daa1b5b17b67" />
+      <TestMethod codeBase="C:\Users\luise\Downloads\project\bin\Debug\net8.0\AutomationEcommerce.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="AutomationEcommerce.Features.AddProductToCartFeature" name="AddAProductToTheCartSuccessfully" />
+    </UnitTest>
+    <UnitTest name="Invalid login attempt" storage="c:\users\luise\downloads\project\bin\debug\net8.0\automationecommerce.dll" id="951c90fe-722e-78cd-5500-b16f9e9986cc">
+      <Execution id="7813cba4-38ef-4716-a49e-166203401c04" />
+      <TestMethod codeBase="C:\Users\luise\Downloads\project\bin\Debug\net8.0\AutomationEcommerce.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="AutomationEcommerce.Features.UserLoginFeature" name="InvalidLoginAttempt" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="0eef3a3d-4ece-41b0-2cea-a8641df0a46c" executionId="afa7e2b9-cf8d-4245-8f64-daa1b5b17b67" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4965ee36-297b-08e8-cebe-50ea39da6f3b" executionId="a7aa2b11-ca73-4e90-9fa8-ce385aa46964" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="951c90fe-722e-78cd-5500-b16f9e9986cc" executionId="7813cba4-38ef-4716-a49e-166203401c04" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="24a4d782-59c0-ea76-7875-2a4a8caf2d5c" executionId="496d153a-d099-4884-91ef-b7e179ef97c0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="37c25d94-8dbb-0bb2-54f7-a12e2551d7c8" executionId="310a7df5-84de-464f-aed2-91cbe8dcc7ea" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="27541a9e-3061-c5f8-ec55-c2340f3f8186" executionId="e7116709-b3ca-45fd-8fb2-2abcd1cfc47e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Resultados que não estão em uma lista" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="Todos os resultados carregados" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="6" executed="6" passed="6" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.1.4+50e68bbb8b (64-bit .NET 8.0.20)&#xD;
+[xUnit.net 00:00:00.07]   Discovering: AutomationEcommerce&#xD;
+[xUnit.net 00:00:00.11]   Discovered:  AutomationEcommerce&#xD;
+[xUnit.net 00:00:00.13]   Starting:    AutomationEcommerce&#xD;
+-&gt; Loading plugin C:\Users\luise\Downloads\project\bin\Debug\net8.0\LivingDoc.SpecFlowPlugin.dll&#xD;
+-&gt; Loading plugin C:\Users\luise\Downloads\project\bin\Debug\net8.0\TechTalk.SpecFlow.xUnit.SpecFlowPlugin.dll&#xD;
+-&gt; Loading plugin C:\Users\luise\Downloads\project\bin\Debug\net8.0\AutomationEcommerce.dll&#xD;
+-&gt; Using specflow.json&#xD;
+-&gt; LivingDocPlugin: Output generated in: C:\Users\luise\Downloads\project\bin\Debug\net8.0\TestExecution.json&#xD;
+[xUnit.net 00:00:24.06]   Finished:    AutomationEcommerce&#xD;
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

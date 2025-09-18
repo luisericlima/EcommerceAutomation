@@ -72,7 +72,7 @@ Gerar o Relatório LivingDoc:
 Após executar os testes, gere o relatório interativo LivingDoc com:
 ```
 dotnet test --logger "trx;LogFileName=TestResults.trx"
-livingdoc test-assembly bin/Debug/net8.0/AutomationEcommerce.dll -t TestResults\TestResults.trx
+livingdoc test-assembly bin/Debug/net8.0/AutomationEcommerce.dll -t bin/Debug/net8.0/TestExecution.json
 ```
 
 O relatório gerado será encontrado em um arquivo LivingDoc.html, que pode ser aberto em qualquer navegador.

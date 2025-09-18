@@ -1,6 +1,4 @@
-﻿using AutomationEcommerce.Helpers;
-using OpenQA.Selenium;
-using System;
+﻿using OpenQA.Selenium;
 using TechTalk.SpecFlow;
 
 namespace AutomationEcommerce.Support

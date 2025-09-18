@@ -1,7 +1,7 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
-namespace AutomationEcommerce.Helpers
+namespace AutomationEcommerce.Support
 {
     public class WebDriverHelper
     {

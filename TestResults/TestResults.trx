@@ -1,141 +1,204 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TestRun id="b664f14f-17e6-4f80-83ab-92cead9dcf55" name="luise@PC-ERIC 2025-09-18 18:15:30" runUser="PC-ERIC\luise" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
-  <Times creation="2025-09-18T18:15:30.7215725-03:00" queuing="2025-09-18T18:15:30.7215730-03:00" start="2025-09-18T18:15:19.2905777-03:00" finish="2025-09-18T18:15:42.1919485-03:00" />
-  <TestSettings name="default" id="5a3460ed-4a54-4da3-9936-76c16d7e1ffe">
-    <Deployment runDeploymentRoot="luise_PC-ERIC_2025-09-18_18_15_30" />
+<TestRun id="ef0527a5-d67b-4bd7-9e91-3fb03ba5f5d0" name="luise@PC-ERIC 2025-09-18 18:17:39" runUser="PC-ERIC\luise" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2025-09-18T18:17:39.8952195-03:00" queuing="2025-09-18T18:17:39.8952201-03:00" start="2025-09-18T18:17:27.5134214-03:00" finish="2025-09-18T18:17:53.8531837-03:00" />
+  <TestSettings name="default" id="dac46e3f-2f6b-49a9-ad42-932f82cab13f">
+    <Deployment runDeploymentRoot="luise_PC-ERIC_2025-09-18_18_17_39" />
   </TestSettings>
   <Results>
-    <UnitTestResult executionId="de067ae9-8baf-4def-949a-fa0299444d6e" testId="0eef3a3d-4ece-41b0-2cea-a8641df0a46c" testName="Add a product to the cart successfully" computerName="PC-ERIC" duration="00:00:17.1501550" startTime="2025-09-18T18:15:19.9091385-03:00" endTime="2025-09-18T18:15:37.0626037-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="de067ae9-8baf-4def-949a-fa0299444d6e">
+    <UnitTestResult executionId="3a6b6216-ae9e-4d32-bef0-56a11ee73b80" testId="951c90fe-722e-78cd-5500-b16f9e9986cc" testName="Invalid login attempt" computerName="PC-ERIC" duration="00:00:08.6678522" startTime="2025-09-18T18:17:40.9265190-03:00" endTime="2025-09-18T18:17:49.5932687-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3a6b6216-ae9e-4d32-bef0-56a11ee73b80">
+      <Output>
+        <StdOut>Given I am on the login page&#xD;
+-&gt; done: LoginSteps.GivenIAmOnTheLoginPage() (5,9s)&#xD;
+When I enter invalid credentials&#xD;
+-&gt; done: LoginSteps.WhenIEnterInvalidCredentials() (0,5s)&#xD;
+Then I should see an error message&#xD;
+-&gt; done: LoginSteps.ThenIShouldSeeAnErrorMessage() (1,8s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="ade400a8-e437-4a67-89e8-59a42fbf58e6" testId="27541a9e-3061-c5f8-ec55-c2340f3f8186" testName="Successful user registration" computerName="PC-ERIC" duration="00:00:10.6640219" startTime="2025-09-18T18:17:39.8702054-03:00" endTime="2025-09-18T18:17:50.4817751-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ade400a8-e437-4a67-89e8-59a42fbf58e6">
+      <Output>
+        <StdOut>Given the user is on the signup page&#xD;
+-&gt; done: SignupSteps.GivenTheUserIsOnTheSignupPage() (2,7s)&#xD;
+When the user fills in the valid details&#xD;
+-&gt; done: SignupSteps.WhenTheUserFillsInTheValidDetails() (7,6s)&#xD;
+Then the system should display a success message&#xD;
+-&gt; done: SignupSteps.ThenTheSystemShouldDisplayASuccessMessage() (0,0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="52accbbe-e904-4322-87fe-67857768dca1" testId="0eef3a3d-4ece-41b0-2cea-a8641df0a46c" testName="Add a product to the cart successfully" computerName="PC-ERIC" duration="00:00:16.9667634" startTime="2025-09-18T18:17:28.1081579-03:00" endTime="2025-09-18T18:17:45.0780237-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="52accbbe-e904-4322-87fe-67857768dca1">
       <Output>
         <StdOut>Given I am logged in to the site for Add to Cart&#xD;
--&gt; done: AddToCartSteps.GivenIAmLoggedInToTheSiteForAddToCart() (11,8s)&#xD;
+-&gt; done: AddToCartSteps.GivenIAmLoggedInToTheSiteForAddToCart() (11,4s)&#xD;
 When I go to the products page&#xD;
--&gt; done: AddToCartSteps.WhenIGoToTheProductsPage() (2,5s)&#xD;
+-&gt; done: AddToCartSteps.WhenIGoToTheProductsPage() (2,4s)&#xD;
 And I click on "View Product" of a specific product&#xD;
 -&gt; done: AddToCartSteps.WhenIClickOnViewProductOfASpecificProduct("View Product") (1,8s)&#xD;
 And I click on "Add to cart"&#xD;
 -&gt; done: AddToCartSteps.WhenIClickOnAddToCart("Add to cart") (0,0s)&#xD;
 Then I should see the "Added!" modal&#xD;
--&gt; done: AddToCartSteps.ThenIShouldSeeTheAddedModal("Added!") (0,5s)&#xD;
+-&gt; done: AddToCartSteps.ThenIShouldSeeTheAddedModal("Added!") (0,6s)&#xD;
 And I close the modal&#xD;
--&gt; done: AddToCartSteps.ThenICloseTheModal() (0,0s)</StdOut>
+-&gt; done: AddToCartSteps.ThenICloseTheModal() (0,1s)</StdOut>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="90969166-c252-4bb4-8601-4ea74f15f7c2" testId="37c25d94-8dbb-0bb2-54f7-a12e2551d7c8" testName="Registering with an existing email" computerName="PC-ERIC" duration="00:00:10.7673184" startTime="2025-09-18T18:15:19.9081859-03:00" endTime="2025-09-18T18:15:30.6814138-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="90969166-c252-4bb4-8601-4ea74f15f7c2">
-      <Output>
-        <StdOut>Given the user is on the signup page&#xD;
--&gt; done: SignupSteps.GivenTheUserIsOnTheSignupPage() (3,9s)&#xD;
-When the user tries to register with an existing email&#xD;
--&gt; done: SignupSteps.WhenTheUserTriesToRegisterWithAnExistingEmail() (6,4s)&#xD;
-Then the system should display the message "Email Address already exist!"&#xD;
--&gt; done: SignupSteps.ThenTheSystemShouldDisplayTheMessage("Email Address alr...") (0,1s)</StdOut>
-      </Output>
-    </UnitTestResult>
-    <UnitTestResult executionId="58b605e7-27ed-454e-a044-ff5569649182" testId="24a4d782-59c0-ea76-7875-2a4a8caf2d5c" testName="Complete purchase flow with valid data" computerName="PC-ERIC" duration="00:00:21.3883972" startTime="2025-09-18T18:15:19.9090843-03:00" endTime="2025-09-18T18:15:41.3008570-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="58b605e7-27ed-454e-a044-ff5569649182">
+    <UnitTestResult executionId="6d210c53-b8ac-4d4b-b5ac-35a8c8fb2b12" testId="24a4d782-59c0-ea76-7875-2a4a8caf2d5c" testName="Complete purchase flow with valid data" computerName="PC-ERIC" duration="00:00:25.5191583" startTime="2025-09-18T18:17:28.1081776-03:00" endTime="2025-09-18T18:17:53.6303325-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6d210c53-b8ac-4d4b-b5ac-35a8c8fb2b12">
       <Output>
         <StdOut>Given I am logged in to the site for Continue Purchase&#xD;
--&gt; done: ContinuePurchaseSteps.GivenIAmLoggedInToTheSiteForContinuePurchase() (10,8s)&#xD;
+-&gt; done: ContinuePurchaseSteps.GivenIAmLoggedInToTheSiteForContinuePurchase() (7,7s)&#xD;
 When I add a product to the cart&#xD;
--&gt; done: ContinuePurchaseSteps.WhenIAddAProductToTheCart() (3,2s)&#xD;
+-&gt; done: ContinuePurchaseSteps.WhenIAddAProductToTheCart() (10,1s)&#xD;
 And I close the modal with "Continue Shopping"&#xD;
--&gt; done: ContinuePurchaseSteps.WhenICloseTheModalWithContinueShopping("Continue Shopping") (0,9s)&#xD;
+-&gt; done: ContinuePurchaseSteps.WhenICloseTheModalWithContinueShopping("Continue Shopping") (0,7s)&#xD;
 And I go to the cart&#xD;
--&gt; done: ContinuePurchaseSteps.WhenIGoToTheCart() (0,9s)&#xD;
+-&gt; done: ContinuePurchaseSteps.WhenIGoToTheCart() (0,8s)&#xD;
 And I proceed to checkout&#xD;
--&gt; done: ContinuePurchaseSteps.WhenIProceedToCheckout() (1,7s)&#xD;
+-&gt; done: ContinuePurchaseSteps.WhenIProceedToCheckout() (1,8s)&#xD;
 And I enter a message in the checkout&#xD;
 -&gt; done: ContinuePurchaseSteps.WhenIEnterAMessageInTheCheckout() (0,1s)&#xD;
 And I place the order&#xD;
--&gt; done: ContinuePurchaseSteps.WhenIPlaceTheOrder() (0,9s)&#xD;
+-&gt; done: ContinuePurchaseSteps.WhenIPlaceTheOrder() (0,8s)&#xD;
 And I fill in the payment details&#xD;
--&gt; done: ContinuePurchaseSteps.WhenIFillInThePaymentDetails() (2,6s)&#xD;
+-&gt; done: ContinuePurchaseSteps.WhenIFillInThePaymentDetails() (3,1s)&#xD;
 Then I should successfully place the order&#xD;
 -&gt; done: ContinuePurchaseSteps.ThenIShouldSuccessfullyPlaceTheOrder() (0,0s)</StdOut>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="f2c7d40d-fa48-4752-941c-4d91bb2a1d9b" testId="27541a9e-3061-c5f8-ec55-c2340f3f8186" testName="Successful user registration" computerName="PC-ERIC" duration="00:00:11.2930879" startTime="2025-09-18T18:15:30.7010411-03:00" endTime="2025-09-18T18:15:41.9747782-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f2c7d40d-fa48-4752-941c-4d91bb2a1d9b">
-      <Output>
-        <StdOut>Given the user is on the signup page&#xD;
--&gt; done: SignupSteps.GivenTheUserIsOnTheSignupPage() (4,9s)&#xD;
-When the user fills in the valid details&#xD;
--&gt; done: SignupSteps.WhenTheUserFillsInTheValidDetails() (6,1s)&#xD;
-Then the system should display a success message&#xD;
--&gt; done: SignupSteps.ThenTheSystemShouldDisplayASuccessMessage() (0,0s)</StdOut>
-      </Output>
-    </UnitTestResult>
-    <UnitTestResult executionId="fb1001f6-ff79-4a1b-ac88-271a72e246e9" testId="951c90fe-722e-78cd-5500-b16f9e9986cc" testName="Invalid login attempt" computerName="PC-ERIC" duration="00:00:06.5367884" startTime="2025-09-18T18:15:32.8760300-03:00" endTime="2025-09-18T18:15:39.4112940-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fb1001f6-ff79-4a1b-ac88-271a72e246e9">
+    <UnitTestResult executionId="443a9d95-c8bd-409b-ac78-fd563e59e3b7" testId="4965ee36-297b-08e8-cebe-50ea39da6f3b" testName="Login with valid credentials" computerName="PC-ERIC" duration="00:00:12.8139830" startTime="2025-09-18T18:17:28.1080986-03:00" endTime="2025-09-18T18:17:40.9255084-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="443a9d95-c8bd-409b-ac78-fd563e59e3b7">
       <Output>
         <StdOut>Given I am on the login page&#xD;
--&gt; done: LoginSteps.GivenIAmOnTheLoginPage() (1,8s)&#xD;
-When I enter invalid credentials&#xD;
--&gt; done: LoginSteps.WhenIEnterInvalidCredentials() (1,9s)&#xD;
-Then I should see an error message&#xD;
--&gt; done: LoginSteps.ThenIShouldSeeAnErrorMessage() (2,3s)</StdOut>
-      </Output>
-    </UnitTestResult>
-    <UnitTestResult executionId="b9f5114a-68a4-4eec-ae74-ab4dcc3302ce" testId="4965ee36-297b-08e8-cebe-50ea39da6f3b" testName="Login with valid credentials" computerName="PC-ERIC" duration="00:00:12.9618122" startTime="2025-09-18T18:15:19.9091206-03:00" endTime="2025-09-18T18:15:32.8743807-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b9f5114a-68a4-4eec-ae74-ab4dcc3302ce">
-      <Output>
-        <StdOut>Given I am on the login page&#xD;
--&gt; done: LoginSteps.GivenIAmOnTheLoginPage() (7,4s)&#xD;
+-&gt; done: LoginSteps.GivenIAmOnTheLoginPage() (7,0s)&#xD;
 When I enter valid credentials&#xD;
 -&gt; done: LoginSteps.WhenIEnterValidCredentials() (4,7s)&#xD;
 Then I should be redirected to the homepage&#xD;
--&gt; done: LoginSteps.ThenIShouldBeRedirectedToTheHomepage() (0,0s)</StdOut>
+-&gt; done: LoginSteps.ThenIShouldBeRedirectedToTheHomepage() (0,1s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="8505a3c4-3e22-4fbc-a9e5-f85b0feb7557" testId="37c25d94-8dbb-0bb2-54f7-a12e2551d7c8" testName="Registering with an existing email" computerName="PC-ERIC" duration="00:00:11.6946944" startTime="2025-09-18T18:17:28.1067792-03:00" endTime="2025-09-18T18:17:39.8173964-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8505a3c4-3e22-4fbc-a9e5-f85b0feb7557">
+      <Output>
+        <StdOut>Given the user is on the signup page&#xD;
+-&gt; done: SignupSteps.GivenTheUserIsOnTheSignupPage() (7,4s)&#xD;
+When the user tries to register with an existing email&#xD;
+-&gt; error: no such element: Unable to locate element: {"method":"xpath","selector":"//button[@data-qa='signup-button']"}
+  (Session info: chrome=140.0.7339.185); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception (2,1s)&#xD;
+Then the system should display the message "Email Address already exist!"&#xD;
+-&gt; skipped because of previous errors</StdOut>
+        <ErrorInfo>
+          <Message>OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate element: {"method":"xpath","selector":"//button[@data-qa='signup-button']"}
+  (Session info: chrome=140.0.7339.185); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception</Message>
+          <StackTrace>   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)&#xD;
+   at OpenQA.Selenium.WebDriver.ExecuteAsync(String driverCommandToExecute, Dictionary`2 parameters)&#xD;
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)&#xD;
+   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)&#xD;
+   at OpenQA.Selenium.By.&lt;.ctor&gt;b__6_0(ISearchContext context)&#xD;
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)&#xD;
+   at OpenQA.Selenium.WebDriver.FindElement(By by)&#xD;
+   at AutomationEcommerce.Pages.SignupPage.get_SignupButton() in C:\Users\luise\OneDrive\Documents\EcommerceAutomation\Pages\SignupPage.cs:line 21&#xD;
+   at AutomationEcommerce.Pages.SignupPage.ClickSignupButton() in C:\Users\luise\OneDrive\Documents\EcommerceAutomation\Pages\SignupPage.cs:line 87&#xD;
+   at AutomationEcommerce.Tests.SignupSteps.WhenTheUserTriesToRegisterWithAnExistingEmail() in C:\Users\luise\OneDrive\Documents\EcommerceAutomation\Steps\SignupSteps.cs:line 62&#xD;
+   at InvokeStub_Action`1.Invoke(Object, Span`1)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithOneArg(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)&#xD;
+   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan&amp; duration)&#xD;
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments, TimeSpan&amp; duration)&#xD;
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(IContextManager contextManager, StepInstance stepInstance)&#xD;
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()&#xD;
+   at TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()&#xD;
+   at AutomationEcommerce.Features.UserRegistrationFeature.ScenarioCleanup()&#xD;
+   at AutomationEcommerce.Features.UserRegistrationFeature.RegisteringWithAnExistingEmail() in C:\Users\luise\OneDrive\Documents\EcommerceAutomation\features\Signup.feature:line 15&#xD;
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)</StackTrace>
+        </ErrorInfo>
       </Output>
     </UnitTestResult>
   </Results>
   <TestDefinitions>
     <UnitTest name="Login with valid credentials" storage="c:\users\luise\onedrive\documents\ecommerceautomation\bin\debug\net8.0\automationecommerce.dll" id="4965ee36-297b-08e8-cebe-50ea39da6f3b">
-      <Execution id="b9f5114a-68a4-4eec-ae74-ab4dcc3302ce" />
+      <Execution id="443a9d95-c8bd-409b-ac78-fd563e59e3b7" />
       <TestMethod codeBase="C:\Users\luise\OneDrive\Documents\EcommerceAutomation\bin\Debug\net8.0\AutomationEcommerce.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="AutomationEcommerce.Features.UserLoginFeature" name="LoginWithValidCredentials" />
     </UnitTest>
     <UnitTest name="Complete purchase flow with valid data" storage="c:\users\luise\onedrive\documents\ecommerceautomation\bin\debug\net8.0\automationecommerce.dll" id="24a4d782-59c0-ea76-7875-2a4a8caf2d5c">
-      <Execution id="58b605e7-27ed-454e-a044-ff5569649182" />
+      <Execution id="6d210c53-b8ac-4d4b-b5ac-35a8c8fb2b12" />
       <TestMethod codeBase="C:\Users\luise\OneDrive\Documents\EcommerceAutomation\bin\Debug\net8.0\AutomationEcommerce.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="AutomationEcommerce.Features.CompletePurchaseFlowFeature" name="CompletePurchaseFlowWithValidData" />
     </UnitTest>
     <UnitTest name="Successful user registration" storage="c:\users\luise\onedrive\documents\ecommerceautomation\bin\debug\net8.0\automationecommerce.dll" id="27541a9e-3061-c5f8-ec55-c2340f3f8186">
-      <Execution id="f2c7d40d-fa48-4752-941c-4d91bb2a1d9b" />
+      <Execution id="ade400a8-e437-4a67-89e8-59a42fbf58e6" />
       <TestMethod codeBase="C:\Users\luise\OneDrive\Documents\EcommerceAutomation\bin\Debug\net8.0\AutomationEcommerce.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="AutomationEcommerce.Features.UserRegistrationFeature" name="SuccessfulUserRegistration" />
     </UnitTest>
     <UnitTest name="Registering with an existing email" storage="c:\users\luise\onedrive\documents\ecommerceautomation\bin\debug\net8.0\automationecommerce.dll" id="37c25d94-8dbb-0bb2-54f7-a12e2551d7c8">
-      <Execution id="90969166-c252-4bb4-8601-4ea74f15f7c2" />
+      <Execution id="8505a3c4-3e22-4fbc-a9e5-f85b0feb7557" />
       <TestMethod codeBase="C:\Users\luise\OneDrive\Documents\EcommerceAutomation\bin\Debug\net8.0\AutomationEcommerce.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="AutomationEcommerce.Features.UserRegistrationFeature" name="RegisteringWithAnExistingEmail" />
     </UnitTest>
     <UnitTest name="Add a product to the cart successfully" storage="c:\users\luise\onedrive\documents\ecommerceautomation\bin\debug\net8.0\automationecommerce.dll" id="0eef3a3d-4ece-41b0-2cea-a8641df0a46c">
-      <Execution id="de067ae9-8baf-4def-949a-fa0299444d6e" />
+      <Execution id="52accbbe-e904-4322-87fe-67857768dca1" />
       <TestMethod codeBase="C:\Users\luise\OneDrive\Documents\EcommerceAutomation\bin\Debug\net8.0\AutomationEcommerce.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="AutomationEcommerce.Features.AddProductToCartFeature" name="AddAProductToTheCartSuccessfully" />
     </UnitTest>
     <UnitTest name="Invalid login attempt" storage="c:\users\luise\onedrive\documents\ecommerceautomation\bin\debug\net8.0\automationecommerce.dll" id="951c90fe-722e-78cd-5500-b16f9e9986cc">
-      <Execution id="fb1001f6-ff79-4a1b-ac88-271a72e246e9" />
+      <Execution id="3a6b6216-ae9e-4d32-bef0-56a11ee73b80" />
       <TestMethod codeBase="C:\Users\luise\OneDrive\Documents\EcommerceAutomation\bin\Debug\net8.0\AutomationEcommerce.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="AutomationEcommerce.Features.UserLoginFeature" name="InvalidLoginAttempt" />
     </UnitTest>
   </TestDefinitions>
   <TestEntries>
-    <TestEntry testId="0eef3a3d-4ece-41b0-2cea-a8641df0a46c" executionId="de067ae9-8baf-4def-949a-fa0299444d6e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="37c25d94-8dbb-0bb2-54f7-a12e2551d7c8" executionId="90969166-c252-4bb4-8601-4ea74f15f7c2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="24a4d782-59c0-ea76-7875-2a4a8caf2d5c" executionId="58b605e7-27ed-454e-a044-ff5569649182" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="27541a9e-3061-c5f8-ec55-c2340f3f8186" executionId="f2c7d40d-fa48-4752-941c-4d91bb2a1d9b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="951c90fe-722e-78cd-5500-b16f9e9986cc" executionId="fb1001f6-ff79-4a1b-ac88-271a72e246e9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="4965ee36-297b-08e8-cebe-50ea39da6f3b" executionId="b9f5114a-68a4-4eec-ae74-ab4dcc3302ce" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="951c90fe-722e-78cd-5500-b16f9e9986cc" executionId="3a6b6216-ae9e-4d32-bef0-56a11ee73b80" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="27541a9e-3061-c5f8-ec55-c2340f3f8186" executionId="ade400a8-e437-4a67-89e8-59a42fbf58e6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0eef3a3d-4ece-41b0-2cea-a8641df0a46c" executionId="52accbbe-e904-4322-87fe-67857768dca1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="24a4d782-59c0-ea76-7875-2a4a8caf2d5c" executionId="6d210c53-b8ac-4d4b-b5ac-35a8c8fb2b12" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4965ee36-297b-08e8-cebe-50ea39da6f3b" executionId="443a9d95-c8bd-409b-ac78-fd563e59e3b7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="37c25d94-8dbb-0bb2-54f7-a12e2551d7c8" executionId="8505a3c4-3e22-4fbc-a9e5-f85b0feb7557" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
   </TestEntries>
   <TestLists>
     <TestList name="Resultados que não estão em uma lista" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
     <TestList name="Todos os resultados carregados" id="19431567-8539-422a-85d7-44ee4e166bda" />
   </TestLists>
-  <ResultSummary outcome="Completed">
-    <Counters total="6" executed="6" passed="6" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  <ResultSummary outcome="Failed">
+    <Counters total="6" executed="6" passed="5" failed="1" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
     <Output>
       <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.1.4+50e68bbb8b (64-bit .NET 8.0.20)&#xD;
 [xUnit.net 00:00:00.07]   Discovering: AutomationEcommerce&#xD;
-[xUnit.net 00:00:00.12]   Discovered:  AutomationEcommerce&#xD;
+[xUnit.net 00:00:00.11]   Discovered:  AutomationEcommerce&#xD;
 [xUnit.net 00:00:00.13]   Starting:    AutomationEcommerce&#xD;
 -&gt; Loading plugin C:\Users\luise\OneDrive\Documents\EcommerceAutomation\bin\Debug\net8.0\LivingDoc.SpecFlowPlugin.dll&#xD;
 -&gt; Loading plugin C:\Users\luise\OneDrive\Documents\EcommerceAutomation\bin\Debug\net8.0\TechTalk.SpecFlow.xUnit.SpecFlowPlugin.dll&#xD;
 -&gt; Loading plugin C:\Users\luise\OneDrive\Documents\EcommerceAutomation\bin\Debug\net8.0\AutomationEcommerce.dll&#xD;
 -&gt; Using specflow.json&#xD;
+[xUnit.net 00:00:11.98]       OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate element: {"method":"xpath","selector":"//button[@data-qa='signup-button']"}
+  (Session info: chrome=140.0.7339.185); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception&#xD;
+[xUnit.net 00:00:11.98]       Stack Trace:&#xD;
+[xUnit.net 00:00:11.98]            at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)&#xD;
+[xUnit.net 00:00:11.98]            at OpenQA.Selenium.WebDriver.ExecuteAsync(String driverCommandToExecute, Dictionary`2 parameters)&#xD;
+[xUnit.net 00:00:11.98]            at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)&#xD;
+[xUnit.net 00:00:11.98]            at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)&#xD;
+[xUnit.net 00:00:11.98]            at OpenQA.Selenium.By.&lt;.ctor&gt;b__6_0(ISearchContext context)&#xD;
+[xUnit.net 00:00:11.98]            at OpenQA.Selenium.By.FindElement(ISearchContext context)&#xD;
+[xUnit.net 00:00:11.98]            at OpenQA.Selenium.WebDriver.FindElement(By by)&#xD;
+[xUnit.net 00:00:11.98]         C:\Users\luise\OneDrive\Documents\EcommerceAutomation\Pages\SignupPage.cs(21,0): at AutomationEcommerce.Pages.SignupPage.get_SignupButton()&#xD;
+[xUnit.net 00:00:11.98]         C:\Users\luise\OneDrive\Documents\EcommerceAutomation\Pages\SignupPage.cs(87,0): at AutomationEcommerce.Pages.SignupPage.ClickSignupButton()&#xD;
+[xUnit.net 00:00:11.98]         C:\Users\luise\OneDrive\Documents\EcommerceAutomation\Steps\SignupSteps.cs(62,0): at AutomationEcommerce.Tests.SignupSteps.WhenTheUserTriesToRegisterWithAnExistingEmail()&#xD;
+[xUnit.net 00:00:11.98]            at InvokeStub_Action`1.Invoke(Object, Span`1)&#xD;
+[xUnit.net 00:00:11.98]            at System.Reflection.MethodBaseInvoker.InvokeWithOneArg(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)&#xD;
+[xUnit.net 00:00:11.98]            at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan&amp; duration)&#xD;
+[xUnit.net 00:00:11.98]            at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments, TimeSpan&amp; duration)&#xD;
+[xUnit.net 00:00:11.99]            at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(IContextManager contextManager, StepInstance stepInstance)&#xD;
+[xUnit.net 00:00:11.99]            at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()&#xD;
+[xUnit.net 00:00:11.99]            at TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()&#xD;
+[xUnit.net 00:00:11.99]            at AutomationEcommerce.Features.UserRegistrationFeature.ScenarioCleanup()&#xD;
+[xUnit.net 00:00:11.99]         C:\Users\luise\OneDrive\Documents\EcommerceAutomation\features\Signup.feature(15,0): at AutomationEcommerce.Features.UserRegistrationFeature.RegisteringWithAnExistingEmail()&#xD;
+[xUnit.net 00:00:11.99]            at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)&#xD;
+[xUnit.net 00:00:11.99]            at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)&#xD;
+[xUnit.net 00:00:11.99]       Output:&#xD;
+[xUnit.net 00:00:11.99]         Given the user is on the signup page&#xD;
+[xUnit.net 00:00:11.99]         -&gt; done: SignupSteps.GivenTheUserIsOnTheSignupPage() (7,4s)&#xD;
+[xUnit.net 00:00:11.99]         When the user tries to register with an existing email&#xD;
+[xUnit.net 00:00:11.99]         -&gt; error: no such element: Unable to locate element: {"method":"xpath","selector":"//button[@data-qa='signup-button']"}
+  (Session info: chrome=140.0.7339.185); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception (2,1s)&#xD;
+[xUnit.net 00:00:11.99]         Then the system should display the message "Email Address already exist!"&#xD;
+[xUnit.net 00:00:11.99]         -&gt; skipped because of previous errors&#xD;
 -&gt; LivingDocPlugin: Output generated in: C:\Users\luise\OneDrive\Documents\EcommerceAutomation\bin\Debug\net8.0\TestExecution.json&#xD;
-[xUnit.net 00:00:22.50]   Finished:    AutomationEcommerce&#xD;
+[xUnit.net 00:00:25.95]   Finished:    AutomationEcommerce&#xD;
 </StdOut>
     </Output>
+    <RunInfos>
+      <RunInfo computerName="PC-ERIC" outcome="Error" timestamp="2025-09-18T18:17:39.8214913-03:00">
+        <Text>[xUnit.net 00:00:11.97]     Registering with an existing email [FAIL]</Text>
+      </RunInfo>
+    </RunInfos>
   </ResultSummary>
 </TestRun>

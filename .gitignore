@@ -9,6 +9,8 @@ obj/
 *.log
 *.db
 
-LivingDoc.html
-TestResults.trx
+
+TestResults/
+*.trx
+*.html
 

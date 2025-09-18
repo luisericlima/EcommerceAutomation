@@ -4,22 +4,21 @@
 		<TargetFramework>net8.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
-
 		<IsPackable>false</IsPackable>
 		<IsTestProject>true</IsTestProject>
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Appium.WebDriver" Version="8.0.0" />
-		<PackageReference Include="coverlet.collector" Version="6.0.0" />
-		<PackageReference Include="DotNetSeleniumExtras.WaitHelpers" Version="3.11.0" />
-		<PackageReference Include="LightBDD.Core" Version="3.11.0" />
-		<PackageReference Include="LightBDD.Framework" Version="3.11.0" />
-		<PackageReference Include="LightBDD.XUnit2" Version="3.11.0" />
-		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+		<!-- Pacotes essenciais para Selenium e SpecFlow com XUnit -->
+		<PackageReference Include="SeleniumExtras.WaitHelpers" Version="1.0.2" />
+		<PackageReference Include="SpecFlow" Version="3.9.74" />
+		<PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="3.9.74" />
+		<PackageReference Include="SpecFlow.xUnit" Version="3.9.74" />
 		<PackageReference Include="Selenium.Support" Version="4.4.0" />
 		<PackageReference Include="Selenium.WebDriver" Version="4.35.0" />
-		<PackageReference Include="SeleniumExtras.WaitHelpers" Version="1.0.2" />
+		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+
+		<!-- XUnit para execução dos testes -->
 		<PackageReference Include="xunit" Version="2.9.3" />
 		<PackageReference Include="xunit.runner.visualstudio" Version="3.1.4">
 			<PrivateAssets>all</PrivateAssets>
@@ -28,9 +27,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<!-- Organize as pastas de testes e features -->
 		<Folder Include="Features\" />
-		<Folder Include="Tests\CartTests\" />
-		<Folder Include="Tests\CheckoutTests\" />
 	</ItemGroup>
 
 </Project>

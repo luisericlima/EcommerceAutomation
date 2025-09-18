@@ -8,7 +8,7 @@ namespace AutomationEcommerce.Helpers
         public static IWebDriver InitializeDriver()
         {
             ChromeOptions options = new ChromeOptions();
-            options.AddArguments("start-maximized"); // Maximiza a janela
+            options.AddArguments("start-maximized"); // Maximizes the window
             return new ChromeDriver(options);
         }
     }

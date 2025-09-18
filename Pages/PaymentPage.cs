@@ -23,6 +23,7 @@ namespace AutomationEcommerce.Pages
         private By ExpiryMonthField => By.XPath("//input[@name='expiry_month']");
         private By ExpiryYearField => By.XPath("//input[@name='expiry_year']");
         private By PayButton => By.XPath("//button[@data-qa='pay-button']");
+
         private By OrderPlacedText => By.XPath("//b[text()='Order Placed!']");
 
         // Preenche os dados do cartão
@@ -43,13 +44,14 @@ namespace AutomationEcommerce.Pages
             ((IJavaScriptExecutor)_driver).ExecuteScript("arguments[0].click();", payButton);
         }
 
+
         // Valida se o pedido foi realizado com sucesso
         public bool IsOrderSuccessful()
         {
             try
             {
-                // Espera 5 segundos antes de verificar o elemento
-                var shortWait = new WebDriverWait(_driver, TimeSpan.FromSeconds(5));
+                // Espera 10 segundos antes de verificar o elemento
+                var shortWait = new WebDriverWait(_driver, TimeSpan.FromSeconds(10));
                 shortWait.Until(ExpectedConditions.ElementIsVisible(OrderPlacedText));
                 return true;
             }

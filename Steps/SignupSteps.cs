@@ -1,28 +1,33 @@
-﻿using LightBDD.XUnit2;
-using Xunit;
-using OpenQA.Selenium;
-using AutomationEcommerce.Pages;
+﻿using AutomationEcommerce.Pages;
 using AutomationEcommerce.Support;
-using System;
+using OpenQA.Selenium;
+using TechTalk.SpecFlow;
+using Xunit;
 
 namespace AutomationEcommerce.Tests
 {
-    public class SignupTests : IClassFixture<WebDriverFixture>
+    [Binding]
+    public class SignupSteps
     {
         private readonly IWebDriver _driver;
         private readonly SignupPage _signupPage;
 
-        public SignupTests(WebDriverFixture fixture)
+        // Constructor to inject the WebDriver from WebDriverFixture
+        public SignupSteps(WebDriverFixture fixture)
         {
             _driver = fixture.Driver;
             _signupPage = new SignupPage(_driver);
         }
 
-        [Scenario]
-        public void SignupWithValidDetails()
+        [Given(@"the user is on the signup page")]
+        public void GivenTheUserIsOnTheSignupPage()
         {
             _driver.Navigate().GoToUrl("https://automationexercise.com/signup");
+        }
 
+        [When(@"the user fills in the valid details")]
+        public void WhenTheUserFillsInTheValidDetails()
+        {
             var uniqueEmail = $"user_{DateTime.Now:yyyyMMddHHmmssfff}@test.com";
             _signupPage.FillInitialSignup("Test User", uniqueEmail);
 
@@ -40,27 +45,27 @@ namespace AutomationEcommerce.Tests
             );
 
             _signupPage.SubmitCreateAccount();
+        }
 
-            // Aguarda até que a URL contenha "/account_created"
+        [Then(@"the system should display a success message")]
+        public void ThenTheSystemShouldDisplayASuccessMessage()
+        {
             _signupPage.WaitForUrlContains("/account_created");
-
-            // Verifica se a URL realmente contém o caminho esperado
             Assert.Contains("/account_created", _driver.Url);
         }
 
-        [Scenario]
-        public void SignupWithExistingEmail()
+        [When(@"the user tries to register with an existing email")]
+        public void WhenTheUserTriesToRegisterWithAnExistingEmail()
         {
-            _driver.Navigate().GoToUrl("https://automationexercise.com/signup");
-
             _signupPage.FillInitialSignup("Test User", "tester@gmail.com");
-
-            // Envia o formulário para testar o e-mail já existente
             _signupPage.ClickSignupButton();
+        }
 
-            // Captura a mensagem de erro
+        [Then(@"the system should display the message ""(.*)""")]
+        public void ThenTheSystemShouldDisplayTheMessage(string message)
+        {
             string errorMessage = _signupPage.GetErrorMessage();
-            Assert.Equal("Email Address already exist!", errorMessage);
+            Assert.Equal(message, errorMessage);
         }
     }
 }
